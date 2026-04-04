@@ -2,19 +2,19 @@ import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn } from "typeor
 @Entity('users')
 export class User{
     @PrimaryGeneratedColumn()
-    id: number;
+    id!: number;
     @Column()
-    name: string;
+    name!: string;
     @Column({unique:true})
-    email: string;
+    email!: string;
     @Column()
-    password: string;
+    password!: string;
     @Column({unique:true})
-    phoneNo: string;
+    phoneNo!: string;
     @Column()
-    hashedEmailOtp: string;
+    hashedEmailOtp!: string;
     @Column({default: false})
-    isEmailVerified: boolean;
+    isEmailVerified!: boolean;
     @CreateDateColumn()
-    createdAt: Date;
+    createdAt!: Date;
 }

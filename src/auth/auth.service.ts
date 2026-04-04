@@ -1,9 +1,9 @@
 import { Injectable } from '@nestjs/common';
 import { RegisterUserDto } from './dto/registerUser.dto';
-import { UserService } from 'src/user/user.service';
+import { UserService } from '../user/user.service';
 import * as bcrypt from 'bcrypt';
 import { LoginUserDto } from './dto/loginUser.dto';
-import { MailService } from 'src/mail/mail.service';
+import { MailService } from '../mail/mail.service';
 import { EmailOtpDto } from './dto/emailOtp.dto';
 @Injectable()
 export class AuthService {
