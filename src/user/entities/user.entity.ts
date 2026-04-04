@@ -11,6 +11,10 @@ export class User{
     password: string;
     @Column({unique:true})
     phoneNo: string;
+    @Column()
+    hashedEmailOtp: string;
+    @Column({default: false})
+    isEmailVerified: boolean;
     @CreateDateColumn()
     createdAt: Date;
 }
